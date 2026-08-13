@@ -1,18 +1,42 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -20.999999999999947 629.0015948963318 672.9999999999998" width="630" height="673">
-	<style>
-		.s0 { fill: #16233f;stroke: #ffffff;stroke-miterlimit:100; stroke-width: 15 } 
-		.s1 { fill: none;stroke: #faf8f3;stroke-linecap: round; stroke-width: 18 } 
-		.s2 { fill: #2f5fa8;stroke: #16233f;stroke-miterlimit:100; stroke-width: 3} 
-		.s3 { fill: #c1272d } 
-		.s4 { fill: #ead9b4 } 
-		.s5 { fill: #2b2b2b } 
-	</style>
-	<g id="Layer 1">
-		<path class="s0" d="m128.4 28.24h367.69c67.71 0 122.5 54.89 122.5 122.6v367.59c0 67.7-54.79 122.59-122.5 122.59h-367.69c-67.7 0-122.49-54.89-122.49-122.59v-367.59c0-67.71 54.79-122.6 122.49-122.6z"/>
-		<path class="s1" d="m128.4 325.92l153.25 183.79"/>
-		<path class="s2" d="m327.52 377.9l237.18-367.88c6.51-10.12 20.03-13.02 30.25-6.51l18.33 11.81c10.21 6.61 13.12 20.14 6.61 30.25l-237.18 367.89c-6.51 10.11-20.13 13.12-30.25 6.51l-18.43-11.82c-10.11-6.51-13.02-20.13-6.51-30.25z"/>
-		<path class="s3" d="m325.12 381.61l9.51-14.73 55.19 35.56-9.51 14.72z"/>
-		<path class="s4" d="m281.65 509.71l34.05-113.38 55.19 35.56z"/>
-		<path class="s5" d="m281.65 509.71l10.82-45.07 25.74 16.63z"/>
-	</g>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 629 700" width="630" height="673" style="overflow: visible;">
+    <style>
+        .s0 { fill: #16233f; stroke: #fafafa; stroke-miterlimit: 100; stroke-width: 21 } 
+        .s1 { fill: none; stroke: #f6f6f7; stroke-linecap: round; stroke-width: 35 } 
+        .s2 { fill: #2f5fa8; stroke: #16233f; stroke-miterlimit: 100; stroke-width: 3 } 
+        .s3 { fill: #c1272d } 
+        .s4 { fill: #ead9b4 } 
+        .s5 { fill: #2b2b2b } 
+        
+        /* 1. Global Scale for Checkmark + Pencil */
+        #scaled-mark {
+            transform: scale(1.15);
+            transform-origin: 350px 300px;
+        }
+
+        /* 2. Anisotropic Scale ALONG THE PENCIL'S ANGLE (-57.2 deg) */
+        #thick-pencil {
+            /* Pivot point near the middle of the pencil shaft */
+            transform-origin: 400px 250px;
+            
+            /* Rotate to 0deg -> Scale thickness (Y-axis) by 1.35x -> Rotate back */
+            transform: rotate(-57.2deg) scale(1, 1.25) rotate(57.2deg);
+        }
+    </style>
+    <g id="Layer 1">
+        <!-- Background Card -->
+        <path class="s0" d="m128.4 28.24h367.69c67.71 0 122.5 54.89 122.5 122.6v367.59c0 67.7-54.79 122.59-122.5 122.59h-367.69c-67.7 0-122.49-54.89-122.49-122.59v-367.59c0-67.71 54.79-122.6 122.49-122.6z"/>
+        
+        <g id="scaled-mark">
+            <!-- Checkmark Line -->
+            <path class="s1" d="m128.4 325.92l153.25 183.79"/>
+            
+            <!-- Pencil Group Scaled at Angle -->
+            <g id="thick-pencil">
+                <path class="s2" d="m327.52 377.9l237.18-367.88c6.51-10.12 20.03-13.02 30.25-6.51l18.33 11.81c10.21 6.61 13.12 20.14 6.61 30.25l-237.18 367.89c-6.51 10.11-20.13 13.12-30.25 6.51l-18.43-11.82c-10.11-6.51-13.02-20.13-6.51-30.25z"/>
+                <path class="s3" d="m325.12 381.61l9.51-14.73 55.19 35.56-9.51 14.72z"/>
+                <path class="s4" d="m281.65 509.71l34.05-113.38 55.19 35.56z"/>
+                <path class="s5" d="m281.65 509.71l10.82-45.07 25.74 16.63z"/>
+            </g>
+        </g>
+    </g>
 </svg>
