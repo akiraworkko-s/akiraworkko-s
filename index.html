@@ -253,8 +253,8 @@
     hero: {
       eyebrow: "Exam marking for UK tuition centres",
       heading: "Mock exams marked like the real thing — fast, consistent, explained.",
-      description: "MarkDesk is a marking service built for tuition centres running regular mock exams. Our examiners mark to board-standard criteria, back every paper with a short video walkthrough, and hand your data back through a shared drive your team can actually use — no more chasing marked scripts or guessing where a student lost marks."
-    },
+      description: "Board-standard mock marking built for centres of all sizes. Deliver fast, reliable video walkthroughs for every paper at <strong><mark>£2.50–£3</mark></strong> per script compared to standard <strong><mark>£5–£8</mark></strong> market rates—cutting your monthly marking costs by more than half."
+     },
     trial: {
       heading: "Try it before you commit",
       description: "Send us 10–15 papers and we'll mark them within 1–2 days — completely free. Every paper comes back with a short video breakdown showing exactly where marks were gained and lost, plus written notes your tutors can use straight away.",
@@ -404,7 +404,7 @@
   // ---- render hero ----
   document.getElementById('heroEyebrow').textContent = CONTENT.hero.eyebrow;
   document.getElementById('heroHeading').textContent = CONTENT.hero.heading;
-  document.getElementById('heroDescription').textContent = CONTENT.hero.description;
+  document.getElementById('heroDescription').innerHTML = CONTENT.hero.description;
 
   // ---- render trial ----
   document.getElementById('trialHeading').textContent = CONTENT.trial.heading;
