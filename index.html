@@ -66,9 +66,53 @@
   .nav-cta:hover{ box-shadow:0 8px 18px rgba(193,39,45,.4); }
   .burger{ display:none; background:none; border:none; cursor:pointer; padding:8px; }
   .burger span{ display:block; width:24px; height:2px; background:var(--paper); margin:5px 0; }
-  .mobile-panel{ display:none; flex-direction:column; gap:0; background:var(--navy); padding:0 32px 20px; }
-  .mobile-panel a{ color:#D9D5C8; padding:12px 0; font-size:15px; border-top:1px solid rgba(255,255,255,.08); }
-  header.open .mobile-panel{ display:flex; }
+  .mobile-panel {
+    display: flex;
+    flex-direction: column;
+    background: var(--navy);
+    padding: 0 32px;
+    
+    /* Smooth slide & fade transition */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
+  }
+
+  .mobile-panel a {
+    color: #D9D5C8;
+    padding: 12px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+
+  /* When menu is open */
+  header.open .mobile-panel {
+    max-height: 320px;          /* Opens smoothly */
+    opacity: 1;
+    padding: 0 32px 20px;
+    pointer-events: auto;
+  }
+  .burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--paper);
+    margin: 5px 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  /* Morph to 'X' when open */
+  header.open .burger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  header.open .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  header.open .burger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
   /* ============ HERO ============ */
   .hero{
