@@ -571,8 +571,7 @@
   document.getElementById('burgerBtn').addEventListener('click', () => {
     header.classList.toggle('open');
   });
-  document.querySelectorAll('.mobile-panel a').forEach(a =>
-    a.addEventListener('click', () => header.classList.remove('open'))
+  document.querySelectorAll('.mobile-panel a').forEach(a => a.addEventListener('click', () => header.classList.remove('open'))
   );
 </script>
 </body>
