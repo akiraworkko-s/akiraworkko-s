@@ -182,7 +182,7 @@
   .tier-card{
     flex:1; background:var(--white); border:1px solid var(--hairline);
     border-radius:0 0 var(--r-md) var(--r-md);
-    padding:34px 28px 30px;
+    padding:34px 18px 30px;
     position:relative;
     transition:flex .35s ease, box-shadow .35s ease, transform .4s ease, opacity .4s ease;
   }
@@ -205,9 +205,10 @@
   .tier-price{ font-family:'Fraunces',serif; font-size:15px; margin-bottom:20px; }
   .tier-price strong{ font-size:22px; }
   .tier-features{ border-top:1px solid var(--hairline); margin-bottom:24px; }
-  .feature-row{ display:flex; justify-content:space-between; gap:12px; padding:12px 0; border-bottom:1px solid var(--hairline); font-size:13.5px; }
+  .feature-row{ display:flex; justify-content:space-between; gap:6px; padding:12px 0; border-bottom:1px solid var(--hairline); font-size:13px; white-space: nowrap;}
   .feature-row span:first-child{ color:var(--muted); }
   .feature-row span:last-child{ font-weight:600; color:var(--navy); text-align:right; }
+  .feature-row .sub-text { font-size: 10px; font-weight: 600; white-space: nowrap; opacity: 0.8; }
   .tier-card .btn{ width:100%; }
 
   /* desktop-only hover emphasis */
@@ -329,14 +330,13 @@
       { label:"Monthly Paper Cap", small:"50", medium:"100", large:"200" },
       { label:"Standard Turnaround per Batch", small:"3-5 Days", medium:"2-3 Days", large:"2 Days" },
       { label:"Rush Credit Cost", small:"£25", medium:"£23", large:"£20" },
-      { label:"Standard turnaround", small:"3–5 days", medium:"2–3 days", large:"1–2 days" },
-      { label:"Video Breakdown", small:"Text Only (Video Breakdown Paid Separately)", medium:"Video Breakdown Included", large:"Full Video Breakdown Suite" }
+      { label:"Video Breakdown", small:"Text Only <span class='sub-text'>(Addon Available)</span>", medium:"Included", large:"Full Video Suite" }
     ],
     services: [
       { title:"Rush Credits", text:"Need a set of papers back faster? Apply a Rush Credit to fast-track your submission — bump an entire batch to priority status for an accelerated turnaround when you're on a tight deadline." },
       { title:"Pay As You Go", text:"No contracts, no minimums. Send papers whenever you need them marked and pay per paper at your tier's PAYG rate — ideal for centres with irregular mock schedules." },
       { title:"Shared Drive", text:"Every centre gets a shared drive to see incoming and completed papers, download results, and track marking status in real time — no more emailing back and forth for updates." },
-      { title:"Video + Text Breakdown", text:"Every marked paper comes back two ways: a short video walking through where marks were gained and lost, and written examiner notes — so tutors and students both understand exactly what to work on." }
+      { title:"Video + Text Breakdown", text:"Every marked paper comes back two ways: a short video walking through where marks were gained and lost, and written examiner notes — so tutors and students both understand exactly what to work on. If your plan doesn't include Video Breakdown, you can purchase it separately." }
     ]
   };
 </script>
